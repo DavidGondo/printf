@@ -13,7 +13,6 @@ int _printf(const char *format, ...)
 	int a = 0, b = 0, alloc;
 	char *string, *temp;
 	char *string_copy;
-
 	va_start(valist, format);
 	alloc = 1024;
 	string = malloc(sizeof(char) * alloc);
