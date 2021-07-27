@@ -1,8 +1,4 @@
 #include "holberton.h"
-#include <string.h>
-#include <stdlib.h>
-#include <starg.h>
-#include <stdio.h>
 
 /**
  *_printf - function that produces output according to a format
