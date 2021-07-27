@@ -1,12 +1,16 @@
 #include "holberton.h"
 #include <string.h>
+#include <stdlib.h>
+#include <starg.h>
+#include <stdio.h>
+
 /**
- *_printf - unction that produces output according to a format
- *@format: format specifier.
+ *_printf - function that produces output according to a format
+ *@format:: format specifier.
  *
- *Return: total number of characters printed.
+ *return: total number of characters printed.
  */
-int _printf(const char *format, ...)
+int _printf(const char *format,...)
 {
 	va_list valist;
 	int a = 0, b = 0, alloc;
