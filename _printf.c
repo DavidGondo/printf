@@ -26,8 +26,8 @@ int _printf(const char *format, ...)
 	{
 		if (format[a] == '%')
 		{
-			index++;
-			switch (format[a)
+			a++;
+			switch (format[a])
 			{
 				case 'c':
 					string[b] = (char)va_arg(valist, int);
