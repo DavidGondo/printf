@@ -26,8 +26,8 @@ int _printf(const char *format, ...)
 	{
 		if (format[a] == '%')
 		{
-			a++;
-			switch (format[a])
+			index++;
+			switch (format[a)
 			{
 				case 'c':
 					string[b] = (char)va_arg(valist, int);
@@ -36,7 +36,7 @@ int _printf(const char *format, ...)
 				case 's':
 					string_copy = va_arg(valist, char*);
 					_strncpy(&string[b], string_copy);
-				       nb += _strlen(string_copy);
+					b += _strlen(string_copy);
 					break;
 				case '%':
 					string[b] = '%';
@@ -57,7 +57,7 @@ int _printf(const char *format, ...)
 		else
 		{
 			string[b] = format[a];
-			nb++;
+			b++;
 		}
 		a++;
 	}
