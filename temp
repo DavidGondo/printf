@@ -37,7 +37,7 @@ int _printf(const char *format,...)
 					break;
 				case 's':
 					string_copy = va_arg(valist, char*);
-					strncpy(&string[b], string_copy);
+					_strncpy(&string[b], string_copy);
 					b +=strlen(string_copy);
 					break;
 				case '%':
@@ -46,12 +46,12 @@ int _printf(const char *format,...)
 					break;
 				case 'd':
 					itoa(va_arg(valist, int), temp, 10);
-					strncpy(&string[b], temp);
+					_strncpy(&string[b], temp);
 					b +=strlen(temp);
 					break;
 				case 'i':
 					itoa(va_arg(valist, int), temp, 10);
-					strncpy(&string[b], temp);
+					_strncpy(&string[b], temp);
 					b +=strlen(temp);
 					break;
 			}
