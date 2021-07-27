@@ -5,9 +5,9 @@
  *_printf - function that produces output according to a format
  *@format:: format specifier.
  *
- *return: total number of characters printed.
+ *Return: total number of characters printed.
  */
-int _printf(const char *format,...)
+int _printf(const char *format, ...)
 {
 	va_list valist;
 	int a = 0, b = 0, alloc;
@@ -38,7 +38,7 @@ int _printf(const char *format,...)
 				case 's':
 					string_copy = va_arg(valist, char*);
 					strcpy(&string[b], string_copy);
-					b +=strlen(string_copy);
+					b += strlen(string_copy);
 					break;
 				case '%':
 					string[b] = '%';
@@ -47,12 +47,12 @@ int _printf(const char *format,...)
 				case 'd':
 					itoa(va_arg(valist, int), temp, 10);
 					strcpy(&string[b], temp);
-					b +=strlen(temp);
+					b += strlen(temp);
 					break;
 				case 'i':
 					itoa(va_arg(valist, int), temp, 10);
 					strcpy(&string[b], temp);
-					b +=strlen(temp);
+					b += strlen(temp);
 					break;
 			}
 		}
