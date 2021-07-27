@@ -1,4 +1,5 @@
 #include "holberton.h"
+#include <string.h>
 /**
  *_printf - unction that produces output according to a format
  *@format: format specifier.
@@ -36,7 +37,7 @@ int _printf(const char *format, ...)
 				case 's':
 					string_copy = va_arg(valist, char*);
 					_strncpy(&string[b], string_copy);
-					b += _strlen(string_copy);
+					b +=strlen(string_copy);
 					break;
 				case '%':
 					string[b] = '%';
@@ -45,12 +46,12 @@ int _printf(const char *format, ...)
 				case 'd':
 					itoa(va_arg(valist, int), temp, 10);
 					_strncpy(&string[b], temp);
-					b += _strlen(temp);
+					b +=strlen(temp);
 					break;
 				case 'i':
 					itoa(va_arg(valist, int), temp, 10);
 					_strncpy(&string[b], temp);
-					b += _strlen(temp);
+					b +=strlen(temp);
 					break;
 			}
 		}
