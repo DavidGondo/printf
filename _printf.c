@@ -1,5 +1,6 @@
 #include "holberton.h"
-
+#include <string.h>
+#include <stdio.hx
 /**
  *_printf - function that produces output according to a format
  *@format:: format specifier.
