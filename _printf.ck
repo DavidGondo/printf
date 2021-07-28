@@ -36,8 +36,8 @@ b++;
 break;
 case 's':
 string_copy = va_arg(valist, char*);
-strcpy(&string[b], string_copy);
-b += strlen(string_copy);
+_strncpy(&string[b], string_copy);
+b += _strlen(string_copy);
 break;
 case '%':
 string[b] = '%';
@@ -45,13 +45,13 @@ b++;
 break;
 case 'd':
 itoa(va_arg(valist, int), temp, 10);
-strcpy(&string[b], temp);
-b += strlen(temp);
+_strncpy(&string[b], temp);
+b += _strlen(temp);
 break;
 case 'i':
 itoa(va_arg(valist, int), temp, 10);
-strcpy(&string[b], temp);
-b += strlen(temp);
+_strncpy(&string[b], temp);
+b += _strlen(temp);
 break;
 }
 }
